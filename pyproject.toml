@@ -1,0 +1,31 @@
+[tool.poetry]
+name = "scriptyscripts"
+version = "0.3.24a0"
+description = "scriptyscripts for silly kicks."
+authors = ["Robbie Capps <rocapp@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.scripts]
+scriptyscripts = 'scriptyscripts.cli:cli'
+sscripts = 'scriptyscripts.cli:cli'
+sscripts-list = 'scriptyscripts.cli:list'
+sscripts-search = 'scriptyscripts.cli:list'
+sscripts-run = 'scriptyscripts.cli:run'
+sscripts-edit = 'scriptyscripts.cli:edit'
+
+[tool.poetry.dependencies]
+python = "^3.11"
+click = "^8.1.7"
+toml = "^0.10.2"
+prompt-toolkit = "^3.0.43"
+pytest = "^8.2.0"
+
+# [[tool.poetry.source]]
+# name = "z38s-pypi-packages"
+# url = "http://localhost:1111/simple"
+# priority = "primary"
+trogon = "^0.5.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

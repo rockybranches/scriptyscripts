@@ -1,0 +1,10 @@
+README.md
+setup.py
+scriptyscripts/__init__.py
+scriptyscripts/cli.py
+scriptyscripts.egg-info/PKG-INFO
+scriptyscripts.egg-info/SOURCES.txt
+scriptyscripts.egg-info/dependency_links.txt
+scriptyscripts.egg-info/entry_points.txt
+scriptyscripts.egg-info/requires.txt
+scriptyscripts.egg-info/top_level.txt

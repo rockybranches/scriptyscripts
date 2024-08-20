@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "scriptyscripts"
-version = "0.3.25"
+version = "0.3.26a0"
 description = "scriptyscripts for silly kicks."
 authors = ["Robbie Capps <rocapp@gmail.com>"]
 readme = "README.md"

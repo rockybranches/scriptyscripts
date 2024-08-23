@@ -25,7 +25,7 @@ def get_version_from_poetry():
     output = subprocess.run(
         ['poetry', 'version', '--short'],
         check=True, text=True, capture_output=True,
-        cwd=str(pth.joinpath("scriptyscripts"))
+        cwd=str(pth.joinpath("sscripts"))
     )
     if output is None:
         raise RuntimeError("Failed to get version from poetry.")
@@ -103,8 +103,8 @@ def generate_pager_results(results, interactive=True):
             sys.stderr.flush()
             separator = "=" * 10
             click.secho(
-                f"\n\n{
-                    separator}\n\nClosest match:\n\n\t{results[-1]}\n\n",
+                f"""\n\n{
+                    separator}\n\nClosest match:\n\n\t{results[-1]}\n\n""",
                 color='success', bold=True, blink=False
             )
             sys.stdout.flush()
@@ -302,8 +302,8 @@ def upgrade(bump, version, backup, install_path, local_pypi_path):
         install_path = default_shell_cwd
     if not Path(install_path).exists():
         click.secho(
-            f"Install path {install_path} does not exist. Using default {
-                default_shell_cwd}",
+            f"""Install path {install_path} does not exist. Using default {
+                default_shell_cwd}""",
             color='warning', bold=True)
         install_path = default_shell_cwd
     # set the working directory
@@ -330,8 +330,8 @@ def upgrade(bump, version, backup, install_path, local_pypi_path):
             color='success', bold=True)
         subprocess.run(["poetry", "build"], check=True, cwd=shell_cwd)
         subprocess.run(
-            f'SRC_DIR="$(ls -t dist/*.tar.gz | head -1)"; cp "$SRC_DIR" {
-                str(local_pypi_path)}/',
+            f'''SRC_DIR="$(ls -t dist/*.tar.gz | head -1)"; cp "$SRC_DIR" {
+                str(local_pypi_path)}/''',
             check=True, shell=True)
         click.secho("Copying complete!", color='success', bold=True)
     click.secho("Upgrade complete!", color='success', bold=True)
